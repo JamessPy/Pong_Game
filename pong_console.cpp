@@ -97,8 +97,6 @@ void move_ball()
 	//drawBall(ball_x,ball_y,ballSize,BallGNDColor);
 	if(ball_x>=39){
 		score1 += 1;
-    	//printf("%s","girdi!!");
-    	//score();
 		Sleep(1000);
 		
     	ball_x = 20;
@@ -108,8 +106,6 @@ void move_ball()
 	}
 	if(ball_x <=0){
 		score2 += 1;
-    	//printf("%s","girdi!!");
-    	//score();
 		Sleep(1000);
 		
     	ball_x = 20;
@@ -121,21 +117,14 @@ void move_ball()
         dirY = 0;
     if(ball_y<=0)
         dirY = 1;
-    /*printf("%d\n",ball_y);
-    printf("%s","racket");
-    //printf("%d\n", racket2_y);
-    printf("\n");
-    printf("%s","ballx");
-    printf("%d",ball_x);*/
-    
-    
-    
+  
+
     if(ball_x == racket2_x && (ball_y >= racket2_y-1 && racket2_y+1 >= ball_y))
     	dirX = 1;
     if(ball_x == racket1_x && (ball_y >= racket1_y-1 && racket1_y+1 >= ball_y))
     	dirX = 0;
 
-//	drawBall(ball_x,ball_y,ballSize,BallGNDColor);
+
     ball_x++;
     
     if(dirY == 1)
@@ -148,7 +137,6 @@ void move_ball()
     else
         ball_x--;
 	ball_x--;
-//	drawBall(ball_x,ball_y,ballSize,BallColor);
 	
 
 }
@@ -209,7 +197,6 @@ void playGame()
 }
 
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char** argv) {
 	while(true)
